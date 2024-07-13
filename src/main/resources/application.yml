@@ -1,0 +1,25 @@
+# 配置端口号
+server:
+  port: 8080
+
+# 配置数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/anti-fraud
+    username: root
+    password: root
+
+# 配置MyBatis
+mybatis:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: org.example
+
+mybatis-plus:
+  global-config:
+    db-config:
+      # id生成策略 数据库自增
+      id-type: auto
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

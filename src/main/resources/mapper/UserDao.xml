@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.awaken.antifraudspringboot.mapper.UserDao">
+    <select id="findByPage" resultType="com.awaken.antifraudspringboot.pojo.User">
+        SELECT id,username,nickname,score,state FROM user
+        WHERE 1=1
+        <if test="queryString!=null and queryString!=''">
+            and (username like concat('%',#{queryString},'%')
+            or nickname like concat('%',#{queryString},'%'))
+        </if>
+        LIMIT #{page},#{size}
+    </select>
+    <select id="count" resultType="long">
+        select count(1) from user
+    </select>
+</mapper>
