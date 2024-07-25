@@ -49,16 +49,6 @@
             <artifactId>com.fasterxml.jackson.databind</artifactId>
             <version>2.10.5.1.LIFERAY-PATCHED-1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>fastjson</artifactId>-->
-<!--            <version>1.2.12</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>in.hocg.boot</groupId>-->
-<!--            <artifactId>mybatis-plus-spring-boot-starter</artifactId>-->
-<!--            <version>1.0.57</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -85,6 +75,11 @@
             <artifactId>mybatis-spring-boot-starter-test</artifactId>
             <version>3.0.3</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
         </dependency>
     </dependencies>
 
